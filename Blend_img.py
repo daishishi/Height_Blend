@@ -5,7 +5,7 @@ from PIL import Image
     #Result = ((b+(t*e)-(1-e))/e) # This formula can be used instead of the formula in the function bellow, but be aware that the parameterer e have to be the inverted proportion.
     # The formula bellow is the iverse from the above. The effect(e) must be the inverted proportion i.e.: An e=0.08 above must be e=0.92 on the formula bellow
 def Hght (b,t,e): # All values must be from a range from [0,1]. b=Brush pixel luminancy t=Texture pixel luminancy e=Strengh of the blend effect
-    Result = ((b+(t*(1-e))-(e))/(1-e)) # This Calculus add the brush and texture based on a difference of luminosity within a pre-defined range(variable e).
+    Result = (b+(t*(1-e))-(e))/(1-e) # This Calculus add the brush and texture based on a difference of luminosity within a pre-defined range(variable e).
     return(Result) # The result is a number that can vary bellow 0 and above 1. Numbers between [0,1] indicate a RGB value (0=0 and 1=255). Numbers bellow 0 must clamp to black(0) and above 1 must clamp to white(1)
 
 #Start of user's input section
