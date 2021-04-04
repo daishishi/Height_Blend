@@ -7,7 +7,8 @@ from PIL import Image
 def Hght (b,t,e): # All values must be from a range from [0,1]. b=Brush pixel luminancy t=Texture pixel luminancy e=Strengh of the blend effect
     Result = (b+(t*(1-e))-e)/(1-e) # This Calculus add the brush and texture based on a difference of luminosity within a pre-defined range(variable e).
     return(Result) # The result is a number that can vary bellow 0 and above 1. Numbers between [0,1] indicate a RGB value (0=0 and 1=255). Numbers bellow 0 must clamp to black(0) and above 1 must clamp to white(1)
-
+    #dabA = qBound(0, (dabA + (maskA * (1-pressure)) - (pressure * 255)) / (1 - pressure) , 255);
+    
 #Start of user's input section
 
 pen = None
